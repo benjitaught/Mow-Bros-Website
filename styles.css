@@ -831,6 +831,12 @@ body {
     animation: fadeIn var(--transition-base) ease-out;
 }
 
+/* Google review call-to-action */
+.review-cta {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
 /* ============================================
    Horizontal Carousels (iOS App Store style)
    Single-row, swipe on mobile, scroll on desktop
