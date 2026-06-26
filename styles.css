@@ -270,6 +270,15 @@ a:hover {
     font-size: 40px;
 }
 
+.hero-logo {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin: 0 auto var(--spacing-md);
+    filter: drop-shadow(0 0 16px rgba(0, 0, 0, 0.85)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8));
+}
+
 .hero h1 {
     margin-bottom: var(--spacing-sm);
     font-size: 3.5rem;
