@@ -677,7 +677,7 @@ a:hover {
 /* Footer */
 .footer {
     background-color: #2d5016;
-    color: var(--gray-300);
+    color: var(--white);
     padding: var(--spacing-lg) 0 var(--spacing-2xl);
     margin-top: 0;
 }
