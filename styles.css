@@ -713,6 +713,25 @@ a:hover {
 .footer-credit {
     text-align: center;
     color: var(--gray-400);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.footer-credit a {
+    display: inline-block;
+}
+
+.vaura-logo {
+    height: 40px;
+    width: auto;
+    opacity: 0.85;
+    transition: opacity var(--transition-fast);
+}
+
+.footer-credit a:hover .vaura-logo {
+    opacity: 1;
 }
 
 .footer-credit p {
