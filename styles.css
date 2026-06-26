@@ -80,10 +80,56 @@
     z-index: 50;
 }
 
+.header-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+}
+
 .logo-container {
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
+    flex: 1;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+    white-space: nowrap;
+}
+
+.header-hours,
+.header-call {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--gray-700);
+}
+
+.header-call {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.header-label {
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.header-value {
+    font-size: var(--font-size-sm);
+    color: var(--gray-900);
+    margin: 0;
+    font-weight: 600;
+}
+
+.header-call i {
+    font-size: 24px;
 }
 
 .logo {
@@ -839,8 +885,12 @@ body {
         font-size: 2.5rem;
     }
 
-    /* Hide header logo/brand on mobile to save space for sticky phone header */
+    /* Hide header on mobile to save space for sticky phone header */
     .header {
+        display: none;
+    }
+
+    .header-right {
         display: none;
     }
 
