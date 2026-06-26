@@ -563,7 +563,7 @@ a:hover {
 
 /* CTA Section */
 .cta-section {
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-lg);
     text-align: center;
     color: var(--white);
 }
@@ -678,8 +678,8 @@ a:hover {
 .footer {
     background-color: var(--gray-900);
     color: var(--gray-300);
-    padding: var(--spacing-2xl) 0;
-    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-lg) 0 var(--spacing-2xl);
+    margin-top: 0;
 }
 
 .footer-content {
@@ -1008,23 +1008,27 @@ body {
     }
 }
 
-/* Gallery Marquee (same pace as reviews) */
+/* Gallery Marquee with Manual Scroll (same pace as reviews + swipeable) */
 .gallery-marquee {
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
     margin-bottom: var(--spacing-lg);
     -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
             mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
 }
 
 .gallery-track {
     display: flex;
     gap: var(--spacing-lg);
     width: max-content;
-    padding: 12px 0 22px;
+    padding: 12px 4px 22px;
     animation: reviews-scroll 90s linear infinite;
 }
 
-.gallery-marquee:hover .gallery-track {
+.gallery-marquee:hover .gallery-track,
+.gallery-marquee:active .gallery-track {
     animation-play-state: paused;
 }
 
