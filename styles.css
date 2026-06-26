@@ -793,12 +793,23 @@ body {
     }
 
     .quick-contact {
-        flex-direction: column;
-        gap: var(--spacing-md);
+        gap: var(--spacing-sm);
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    /* Phone icon, "Call Us", and number all on one line to save height */
+    .quick-contact .contact-item > div {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+    }
+
+    .quick-contact .label {
+        font-size: var(--font-size-xs);
     }
 
     .quick-contact .btn {
-        width: 100%;
+        white-space: nowrap;
     }
 }
 
@@ -838,6 +849,58 @@ body {
 }
 
 /* ============================================
+   Auto-scrolling Reviews Marquee
+   Continuous, smooth, seamless loop
+   ============================================ */
+.reviews-marquee {
+    overflow: hidden;
+    margin-bottom: var(--spacing-lg);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+}
+
+.reviews-track {
+    display: flex;
+    gap: var(--spacing-lg);
+    width: max-content;
+    padding: 12px 0 22px;
+    animation: reviews-scroll 90s linear infinite;
+}
+
+/* Pause when the visitor hovers to read */
+.reviews-marquee:hover .reviews-track {
+    animation-play-state: paused;
+}
+
+.reviews-track .testimonial-card {
+    flex: 0 0 320px;
+    width: 320px;
+}
+
+@keyframes reviews-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* Accessibility: no motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .reviews-track {
+        animation: none;
+    }
+    .reviews-marquee {
+        overflow-x: auto;
+    }
+}
+
+/* Combined contact card (phone + email together) */
+.contact-card p {
+    margin: 4px 0;
+}
+.contact-card p a {
+    font-weight: 600;
+}
+
+/* ============================================
    Horizontal Carousels (iOS App Store style)
    Single-row, swipe on mobile, scroll on desktop
    Applies to: Services, Why Choose, Reviews,
@@ -851,6 +914,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
+    justify-content: safe center;  /* center when row fits, start (scrollable) when it overflows */
     gap: var(--spacing-lg);
     overflow-x: auto;
     overflow-y: hidden;

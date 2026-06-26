@@ -6,7 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initAnimations();
     initMobileMenu();
+    initReviewsMarquee();
 });
+
+/**
+ * Duplicate the review cards so the auto-scroll loops seamlessly.
+ * The CSS animates translateX(-50%), so the second half must mirror the first.
+ */
+function initReviewsMarquee() {
+    const track = document.querySelector('.reviews-track');
+    if (!track) return;
+    track.innerHTML += track.innerHTML;
+}
 
 /**
  * Initialize bottom navigation
