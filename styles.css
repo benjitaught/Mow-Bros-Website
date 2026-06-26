@@ -701,7 +701,7 @@ a:hover {
 }
 
 .footer-section p {
-    color: var(--gray-400);
+    color: var(--white);
     font-size: var(--font-size-sm);
     line-height: 1.7;
 }
@@ -715,7 +715,7 @@ a:hover {
 }
 
 .footer-section a {
-    color: var(--gray-400);
+    color: var(--white);
     transition: color var(--transition-fast);
 }
 
@@ -775,11 +775,12 @@ a:hover {
 
 .footer-copyright p {
     margin: 0;
+    color: var(--white);
 }
 
 .footer-credit {
     text-align: center;
-    color: var(--gray-400);
+    color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -804,6 +805,7 @@ a:hover {
 .footer-credit p {
     margin: 0;
     font-size: var(--font-size-xs);
+    color: var(--white);
 }
 
 .footer-credit i {
