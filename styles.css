@@ -761,6 +761,12 @@ a:hover {
     opacity: 0.9;
 }
 
+.footer-brand-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: var(--spacing-sm);
+}
+
 .footer-copyright p {
     margin: 0;
 }
@@ -998,6 +1004,41 @@ body {
         animation: none;
     }
     .reviews-marquee {
+        overflow-x: auto;
+    }
+}
+
+/* Gallery Marquee (same pace as reviews) */
+.gallery-marquee {
+    overflow: hidden;
+    margin-bottom: var(--spacing-lg);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+}
+
+.gallery-track {
+    display: flex;
+    gap: var(--spacing-lg);
+    width: max-content;
+    padding: 12px 0 22px;
+    animation: reviews-scroll 90s linear infinite;
+}
+
+.gallery-marquee:hover .gallery-track {
+    animation-play-state: paused;
+}
+
+.gallery-track .gallery-item {
+    flex: 0 0 280px;
+    width: 280px;
+    height: 200px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-track {
+        animation: none;
+    }
+    .gallery-marquee {
         overflow-x: auto;
     }
 }

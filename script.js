@@ -17,6 +17,12 @@ function initReviewsMarquee() {
     const track = document.querySelector('.reviews-track');
     if (!track) return;
     track.innerHTML += track.innerHTML;
+
+    // Duplicate gallery items for seamless loop
+    const galleryTrack = document.querySelector('.gallery-track');
+    if (galleryTrack) {
+        galleryTrack.innerHTML += galleryTrack.innerHTML;
+    }
 }
 
 /**
