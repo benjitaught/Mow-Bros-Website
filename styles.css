@@ -563,7 +563,12 @@ a:hover {
 
 /* CTA Section */
 .cta-section {
-    padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-lg);
+    padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-2xl);
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     color: var(--white);
 }
@@ -583,6 +588,7 @@ a:hover {
     display: flex;
     gap: var(--spacing-md);
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
