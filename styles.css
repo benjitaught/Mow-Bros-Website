@@ -271,7 +271,7 @@ a:hover {
     color: var(--white);
     position: relative;
     overflow: hidden;
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     background: linear-gradient(135deg, #2d5016 0%, #4a7c2e 100%);
 }
 
@@ -385,12 +385,12 @@ a:hover {
 
 /* Section Styles */
 .section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
     color: var(--gray-900);
 }
 
@@ -398,7 +398,7 @@ a:hover {
     text-align: center;
     color: var(--gray-500);
     font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-lg);
 }
 
 /* Services Grid */
@@ -412,7 +412,7 @@ a:hover {
 .service-card {
     background: var(--white);
     border-radius: var(--radius-xl);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
     text-align: center;
@@ -455,7 +455,7 @@ a:hover {
 .benefit-card {
     background: var(--white);
     border-radius: var(--radius-xl);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     box-shadow: var(--shadow-sm);
     text-align: center;
     transition: all var(--transition-base);
@@ -527,7 +527,7 @@ a:hover {
 .testimonial-card {
     background: var(--white);
     border-radius: var(--radius-xl);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     box-shadow: var(--shadow-md);
     transition: all var(--transition-base);
 }
@@ -648,7 +648,7 @@ a:hover {
 .contact-card {
     background: var(--white);
     border-radius: var(--radius-xl);
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     box-shadow: var(--shadow-md);
     text-align: center;
     transition: all var(--transition-base);
@@ -676,7 +676,7 @@ a:hover {
 
 /* Footer */
 .footer {
-    background-color: var(--gray-900);
+    background-color: #2d5016;
     color: var(--gray-300);
     padding: var(--spacing-lg) 0 var(--spacing-2xl);
     margin-top: 0;
@@ -979,7 +979,7 @@ body {
     display: flex;
     gap: var(--spacing-lg);
     width: max-content;
-    padding: 12px 0 22px;
+    padding: 8px 0 16px;
     animation: reviews-scroll 90s linear infinite;
 }
 
@@ -1023,7 +1023,7 @@ body {
     display: flex;
     gap: var(--spacing-lg);
     width: max-content;
-    padding: 12px 4px 22px;
+    padding: 8px 4px 16px;
     animation: reviews-scroll 90s linear infinite;
 }
 
