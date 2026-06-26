@@ -784,13 +784,6 @@ body {
         font-size: 2.5rem;
     }
 
-    .services-grid,
-    .benefits-grid,
-    .testimonials-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
     .cta-buttons {
         flex-direction: column;
     }
@@ -836,4 +829,74 @@ body {
 
 .animate-fade-in {
     animation: fadeIn var(--transition-base) ease-out;
+}
+
+/* ============================================
+   Horizontal Carousels (iOS App Store style)
+   Single-row, swipe on mobile, scroll on desktop
+   Applies to: Services, Why Choose, Reviews,
+   Latest Work (gallery), and Contact
+   ============================================ */
+.services-grid,
+.benefits-grid,
+.testimonials-grid,
+.gallery-grid,
+.contact-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: var(--spacing-lg);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding-left: var(--spacing-md);
+    /* breathing room so card shadows aren't clipped */
+    padding: 12px 4px 22px;
+    margin-bottom: var(--spacing-xl);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(74, 124, 46, 0.4) transparent;
+}
+
+/* Each card: fixed width, doesn't shrink, snaps into place */
+.services-grid > *,
+.benefits-grid > *,
+.testimonials-grid > *,
+.gallery-grid > *,
+.contact-grid > * {
+    flex: 0 0 auto;
+    width: min(82%, 320px);
+    min-width: min(82%, 320px);  /* never shrink -> row overflows -> scrolls */
+    scroll-snap-align: start;
+}
+
+/* Gallery tiles keep their square shape, aligned to top */
+.gallery-grid {
+    align-items: flex-start;
+}
+
+/* No vertical-lift hover inside horizontal scrollers
+   (a vertical transform would trigger a stray scrollbar) */
+.services-grid .service-card:hover,
+.benefits-grid .benefit-card:hover,
+.testimonials-grid .testimonial-card:hover,
+.contact-grid .contact-card:hover {
+    transform: none;
+}
+
+/* Slim scrollbar cue so desktop users know it scrolls */
+.services-grid::-webkit-scrollbar,
+.benefits-grid::-webkit-scrollbar,
+.testimonials-grid::-webkit-scrollbar,
+.gallery-grid::-webkit-scrollbar,
+.contact-grid::-webkit-scrollbar {
+    height: 6px;
+}
+.services-grid::-webkit-scrollbar-thumb,
+.benefits-grid::-webkit-scrollbar-thumb,
+.testimonials-grid::-webkit-scrollbar-thumb,
+.gallery-grid::-webkit-scrollbar-thumb,
+.contact-grid::-webkit-scrollbar-thumb {
+    background: rgba(74, 124, 46, 0.35);
+    border-radius: var(--radius-full);
 }
