@@ -696,10 +696,37 @@ a:hover {
 
 .footer-bottom {
     border-top: 1px solid var(--gray-800);
-    padding-top: var(--spacing-xl);
-    text-align: center;
+    padding-top: var(--spacing-lg);
     font-size: var(--font-size-sm);
     color: var(--gray-500);
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
+.footer-credit {
+    text-align: center;
+    color: var(--gray-400);
+}
+
+.footer-credit p {
+    margin: 0;
+    font-size: var(--font-size-xs);
+}
+
+.footer-credit i {
+    color: var(--primary);
+    margin-right: 4px;
+}
+
+.footer-credit strong {
+    color: var(--accent);
 }
 
 /* Bottom Navigation (iOS Style) */
