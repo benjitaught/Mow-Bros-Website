@@ -839,6 +839,11 @@ body {
         font-size: 2.5rem;
     }
 
+    /* Hide header logo/brand on mobile to save space for sticky phone header */
+    .header {
+        display: none;
+    }
+
     .cta-buttons {
         flex-direction: column;
     }
